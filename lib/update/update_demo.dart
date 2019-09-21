@@ -14,7 +14,18 @@ class _UpdateDemoState extends State<UpdateDemo> {
         title: Text('应用内升级')
       ),
       body: Center(
-        child: Text('升级'),
+        child: Text('点击下方按钮检测更新'),
+      ),
+      floatingActionButton: Builder(
+        builder: (BuildContext context) {
+          return FloatingActionButton(
+            onPressed: () {
+              print('开始更新了');
+            },
+            tooltip: '点击检测更新',
+            child: Text('更新'),
+          );
+        },
       ),
     );
   }
